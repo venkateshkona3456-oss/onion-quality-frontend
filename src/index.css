@@ -1,0 +1,81 @@
+:root {
+  --plum: #1B5E3F;
+  --paper: #F7FAF7;
+  --brown: #5C6B5D;
+  --olive: #2E7D4F;
+  --rust: #C0392B;
+  --ink: #1F2A24;
+  --border: #DCE6DC;
+
+  --font-serif: 'Poppins', 'Inter', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--plum);
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+}
+
+a { color: inherit; text-decoration: none; }
+
+input, select {
+  font-family: var(--font-sans);
+}
+.nav-bar {
+  display: flex;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.nav-bar a {
+  font-size: 14px;
+  color: var(--brown);
+  border-bottom: 1px solid transparent;
+}
+
+.nav-bar a:hover {
+  color: var(--plum);
+  border-bottom: 1px solid var(--plum);
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.history-table th, .history-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.history-table th {
+  color: var(--brown);
+  font-weight: 500;
+}
