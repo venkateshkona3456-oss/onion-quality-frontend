@@ -8,7 +8,7 @@ function Dashboard() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/api/assessments/stats')
+      .get('https://onion-quality-backend.onrender.com/api/assessments/stats')
       .then((res) => setStats(res.data))
       .catch(() => setError('Dashboard data load చేయడంలో సమస్య వచ్చింది.'));
   }, []);

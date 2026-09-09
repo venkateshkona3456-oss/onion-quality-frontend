@@ -14,7 +14,7 @@ function Login({ onLogin }) {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post('http://localhost:8080/api/auth/login', form);
+      const res = await axios.post('https://onion-quality-backend.onrender.com/api/auth/login', form);
       localStorage.setItem('onionUser', JSON.stringify(res.data));
       onLogin(res.data);
       navigate('/dashboard');

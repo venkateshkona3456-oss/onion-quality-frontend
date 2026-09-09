@@ -10,7 +10,7 @@ function Report() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/assessments/${id}/report`)
+      .get(`https://onion-quality-backend.onrender.com/api/assessments/${id}/report`)
       .then((res) => setReport(res.data))
       .catch(() => setError('Report load చేయడంలో సమస్య వచ్చింది.'));
   }, [id]);
@@ -74,7 +74,7 @@ const downloadPDF = () => {
         <div className="form-card">
           <h3>Analyzed Sample View</h3>
           <img
-            src={`http://localhost:8080/${report.imagePath?.replace(/\\/g, '/')}`}
+            src={`https://onion-quality-backend.onrender.com/${report.imagePath?.replace(/\\/g, '/')}`}
             alt="analyzed sample"
             className="preview-img"
           />

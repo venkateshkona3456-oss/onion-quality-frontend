@@ -14,7 +14,7 @@ const currentUser = JSON.parse(localStorage.getItem('onionUser') || '{}');
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/api/assessments')
+      .get('https://onion-quality-backend.onrender.com/api/assessments')
       .then((res) => setAssessments(res.data.reverse()))
       .catch(() => setError('History load చేయడంలో సమస్య వచ్చింది.'));
   }, []);

@@ -22,7 +22,7 @@ function NewAssessment() {
     setError('');
     try {
       const currentUser = JSON.parse(localStorage.getItem('onionUser') || '{}');
-const res = await axios.post('http://localhost:8080/api/assessments', {
+const res = await axios.post('https://onion-quality-backend.onrender.com/api/assessments', {
   ...form,
   sampleWeight: parseFloat(form.sampleWeight),
   createdBy: currentUser.username,

@@ -10,7 +10,7 @@ function Analytics() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/api/assessments/analytics')
+      .get('https://onion-quality-backend.onrender.com/api/assessments/analytics')
       .then((res) => setData(res.data))
       .catch(() => setError('Analytics load చేయడంలో సమస్య వచ్చింది.'));
   }, []);

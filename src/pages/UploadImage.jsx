@@ -33,7 +33,7 @@ function UploadImage() {
     }, 500);
 
     try {
-      await axios.post(`http://localhost:8080/api/assessments/${id}/upload`, formData, {
+      await axios.post(`https://onion-quality-backend.onrender.com/api/assessments/${id}/upload`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setStep(4);
